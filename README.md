@@ -10,12 +10,12 @@ A user can make a purchase of a content (movie/season) through a purchase option
 
 
 Define and implement the following REST API in Ruby:
-1. An endpoint to return the movies, ordered by creation
-2. An endpoint to return the seasons ordered by creation, including
+1. [x] An endpoint to return the movies, ordered by creation
+2. [x] An endpoint to return the seasons ordered by creation, including
 the list of episodes ordered by its number
-3. An endpoint to return both movies and seasons, ordered by creation.
-4. An endpoint for a user to perform a purchase of a content
-5. An endpoint to get the library of a user ordered by the time that
+3. [ ] An endpoint to return both movies and seasons, ordered by creation.
+4. [ ] An endpoint for a user to perform a purchase of a content
+5. [ ] An endpoint to get the library of a user ordered by the time that
 it's left to watch the content
 
 Notes:
