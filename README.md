@@ -1,4 +1,4 @@
-# TVtime
+# Movietime
 
 Our application has movies, seasons and episodes. Let's simplify the metadata, so it only has a title and a plot. An episode belongs to a season and a season can have N episodes, the episode also has the number of episode in the season.
 
