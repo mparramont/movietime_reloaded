@@ -1,1 +1,1 @@
-json.extract! @episode, :id, :title, :plot, :created_at, :updated_at
+json.extract! @episode, :id, :title, :plot, :season_id, :created_at, :updated_at

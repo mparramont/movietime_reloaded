@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512083541) do
+ActiveRecord::Schema.define(version: 20160512083910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 20160512083541) do
     t.text     "plot"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "season_id"
   end
+
+  add_index "episodes", ["season_id"], name: "index_episodes_on_season_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -56,4 +59,5 @@ ActiveRecord::Schema.define(version: 20160512083541) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "episodes", "seasons"
 end
