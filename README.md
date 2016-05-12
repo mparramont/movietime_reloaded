@@ -8,6 +8,8 @@ We also have users, to simplify, a user only will have an email.
 
 A user can make a purchase of a content (movie/season) through a purchase option. When a user makes a purchase, we store it in his library, the user has up to 2 days to see the content. In his library, we only show the titles that the user has "alive" and he can see and not the expired purchases. Also, while the user has a content in his library, he can't purchase the same content again. For instance, if the user purchases the movie '300: Rise of an Empire' and goes to his library, he will find the movie, if he tries to purchase it again, he will receive an error. 3 days after, if he goes to the library, the movie will not appear in his library and he can purchase it again.
 
+Data model:
+![img_20160512_122310](https://cloud.githubusercontent.com/assets/636075/15212013/cb2a5620-183e-11e6-948e-3c8d93f3232b.jpg)
 
 Define and implement the following REST API in Ruby:
 1. [x] An endpoint to return the movies, ordered by creation
