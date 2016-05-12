@@ -1,5 +1,6 @@
 MovietimeReloaded::Application.routes.draw do
 
+  resources :episodes
   resources :seasons
   resources :users
   resources :movies
