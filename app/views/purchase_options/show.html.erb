@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @purchase_option.price %>
+</p>
+
+<p>
+  <strong>Video quality:</strong>
+  <%= @purchase_option.video_quality %>
+</p>
+
+<%= link_to 'Edit', edit_purchase_option_path(@purchase_option) %> |
+<%= link_to 'Back', purchase_options_path %>

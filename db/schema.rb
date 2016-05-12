@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512083910) do
+ActiveRecord::Schema.define(version: 20160512091731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,23 @@ ActiveRecord::Schema.define(version: 20160512083910) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "purchasable_movies", force: :cascade do |t|
+    t.integer  "movie_id"
+    t.integer  "purchase_option_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "purchasable_movies", ["movie_id"], name: "index_purchasable_movies_on_movie_id", using: :btree
+  add_index "purchasable_movies", ["purchase_option_id"], name: "index_purchasable_movies_on_purchase_option_id", using: :btree
+
+  create_table "purchase_options", force: :cascade do |t|
+    t.string   "price"
+    t.string   "video_quality"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "seasons", force: :cascade do |t|
     t.string   "title"
     t.text     "plot"
@@ -60,4 +77,6 @@ ActiveRecord::Schema.define(version: 20160512083910) do
   end
 
   add_foreign_key "episodes", "seasons"
+  add_foreign_key "purchasable_movies", "movies"
+  add_foreign_key "purchasable_movies", "purchase_options"
 end
